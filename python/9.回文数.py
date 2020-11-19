@@ -17,31 +17,3 @@ class Solution:
         return reversedNumber == x or reversedNumber/10 ==x
 
 # @lc code=end
-def stringToString(input):
-    return input
-
-
-def main():
-    import sys
-    import io
-
-    def readlines():
-        for line in io.TextIOWrapper(sys.stdin.buffer, encoding='utf-8'):
-            yield line.strip('\n')
-
-    lines = readlines()
-    while True:
-        try:
-            line = next(lines)
-            s = int(line)
-
-            ret = Solution().isPalindrome(s)
-
-            out = str(ret)
-            print(out)
-        except StopIteration:
-            break
-
-
-if __name__ == '__main__':
-    main()
