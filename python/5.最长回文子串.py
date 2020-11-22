@@ -28,11 +28,11 @@ class Solution:
 
 
 # @lc code=end
-from input import *
+from input import InputString
 
 
 def main():
-    x = customInputString()
+    x = InputString.customInputString()
     print(x)
     print(Solution().longestPalindrome(x))
 

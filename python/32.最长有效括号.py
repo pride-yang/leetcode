@@ -7,7 +7,7 @@
 # @lc code=start
 class Solution:
     def longestValidParentheses(self, s: str) -> int:
-        
+
 
 
 # @lc code=end
