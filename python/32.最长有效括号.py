@@ -11,10 +11,10 @@ class Solution:
 
 
 # @lc code=end
-from input import *
+from input import InputString
 
 def main():
-    s = inputString()
+    s = InputString.customInputString()
     print(Solution().longestValidParentheses(s))
 
 

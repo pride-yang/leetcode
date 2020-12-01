@@ -7,7 +7,7 @@ def stringToIntegerList(input):
     return json.loads(input)
 
 
-def main()-> List[int]:
+def customInputNums() -> List[int]:
     def readlines():
         for line in io.TextIOWrapper(sys.stdin.buffer, encoding='utf-8'):
             yield line.strip('\n')
@@ -23,4 +23,4 @@ def main()-> List[int]:
 
 
 if __name__ == '__main__':
-    main()
+    customInputNums()

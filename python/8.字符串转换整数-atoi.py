@@ -37,9 +37,10 @@ class Automaton:
         self.state = self.table[self.state][self.get_col(c)]
         if self.state == 'in_number':
             self.ans = self.ans * 10 + int(c)
-            self.ans = min(self.ans, INT_MAX) if self.sign == 1 else min(self.ans, -INT_MIN)
+            self.ans = min(self.ans, INT_MAX) if self.sign == 1 else min(
+                self.ans, -INT_MIN)
         elif self.state == 'signed':
-            self.sign  = 1 if c == '+' else -1
+            self.sign = 1 if c == '+' else -1
 
 
 class Solution:
@@ -52,31 +53,14 @@ class Solution:
 
 # @lc code=end
 
-
-def stringToString(input):
-    return input
+from input import InputString
 
 
 def main():
-    import sys
-    import io
-
-    def readlines():
-        for line in io.TextIOWrapper(sys.stdin.buffer, encoding='utf-8'):
-            yield line.strip('\n')
-
-    lines = readlines()
-    while True:
-        try:
-            line = next(lines)
-            s = stringToString(line)
-
-            ret = Solution().myAtoi(s)
-
-            out = str(ret)
-            print(out)
-        except StopIteration:
-            break
+    s = InputString.customInputString()
+    ret = Solution().myAtoi(s)
+    out = str(ret)
+    print(out)
 
 
 if __name__ == '__main__':
